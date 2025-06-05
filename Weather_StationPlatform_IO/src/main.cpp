@@ -4,15 +4,6 @@
 
 #include "DHTesp.h"
 
-// --- IMPORTANT NETWORK CONFIGURATION ---
-// If using Wokwi and your server (XAMPP) is on your local PC:
-// 1. You NEED to use a tool like ngrok (https://ngrok.com/) to expose your local server.
-// 2. Download ngrok, unzip it.
-// 3. Run in your terminal: ./ngrok http 80  (if your XAMPP/Apache uses port 80)
-// 4. ngrok will give you a public URL like "http://xxxx-xxxx.ngrok.io".
-// 5. Use THAT public URL below, followed by your script path.
-// Example: const char* serverName = "http://your-ngrok-id.ngrok.io/weather_station/insert.php";
-
 const char* serverName = "http://192.168.43.133/weather_station/insert.php"; // REPLACE THIS if using ngrok or if your server IP/path is different
 
 const char* SSID = "Wokwi-GUEST"; // Default for Wokwi online simulator

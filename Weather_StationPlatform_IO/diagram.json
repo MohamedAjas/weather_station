@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Shafee Ahamed",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -86.1, "left": 177, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v240", "h-211.2", "v-240" ] ],
+    [ "dht1:SDA", "esp:18", "green", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "v134.4", "h-67.2", "v-134.4" ] ]
+  ],
+  "dependencies": {}
+}

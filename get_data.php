@@ -16,16 +16,13 @@ if ($filter == 'today') {
     $where = "timestamp >= DATE_SUB(NOW(), INTERVAL 7 DAY)";
 }
 
-header('Content-Type: text/csv');
-header('Content-Disposition: attachment;filename=weather_data.csv');
+$sql = "SELECT * FROM weather_data WHERE $where ORDER BY timestamp DESC";
+$result = $conn->query($sql);
 
-$output = fopen('php://output', 'w');
-fputcsv($output, ['ID', 'Temperature (°C)', 'Humidity (%)', 'Timestamp']);
-
-$result = $conn->query("SELECT * FROM weather_data WHERE $where ORDER BY timestamp DESC");
+$data = [];
 while ($row = $result->fetch_assoc()) {
-    fputcsv($output, $row);
+    $data[] = $row;
 }
-fclose($output);
-exit;
+
+echo json_encode(['data' => $data]);
 ?>

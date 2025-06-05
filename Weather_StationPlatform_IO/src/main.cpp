@@ -4,7 +4,7 @@
 
 #include "DHTesp.h"
 
-const char* serverName = "http://192.168.43.133/weather_station/insert.php"; // REPLACE THIS if using ngrok or if your server IP/path is different
+const char* serverName = "http://192.168.8.170/weather_station/insert.php"; // REPLACE THIS if using ngrok or if your server IP/path is different
 
 const char* SSID = "Wokwi-GUEST"; // Default for Wokwi online simulator
 const char* PASSWORD = "";        // Default for Wokwi

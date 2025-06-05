@@ -13,7 +13,7 @@
 // 5. Use THAT public URL below, followed by your script path.
 // Example: const char* serverName = "http://your-ngrok-id.ngrok.io/weather_station/insert.php";
 
-const char* serverName = "http://172.16.32.61/weather_station/insert.php"; // REPLACE THIS if using ngrok or if your server IP/path is different
+const char* serverName = "http://192.168.43.133/weather_station/insert.php"; // REPLACE THIS if using ngrok or if your server IP/path is different
 
 const char* SSID = "Wokwi-GUEST"; // Default for Wokwi online simulator
 const char* PASSWORD = "";        // Default for Wokwi
